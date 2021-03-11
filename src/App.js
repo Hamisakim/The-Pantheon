@@ -20,13 +20,9 @@ function App() {
             <GodsList />
           </Route>
 
-          <Route path='/family-tree/:id'>
-          </Route>
-
-          <Route path='/family-tree'>
+          <Route path='/family-tree/:selectedName'>
             <FamilyTree />
           </Route>
-
 
 
 

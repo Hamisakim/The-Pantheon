@@ -24,11 +24,6 @@ const Navbar = () => {
             Gods
           </Link>
         </div>
-        < div className='navbar-start'>
-          <Link to='/family-tree' className='navbar-item'>
-            Family Tree
-          </Link>
-        </div>
       </div>
     </nav>
   )
