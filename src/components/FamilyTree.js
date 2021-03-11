@@ -68,12 +68,12 @@ const FamilyTree = () => {
         <div className='top-container parents-row god-row'>
           {
             !mother ? ''
-              : <Link to={`/family-tree/${mother.name}`} ><div className='mother-container'> {mother.name} </div> </Link>
+              : <Link to={`/family-tree/${mother.name}`} ><div className='mother-container single-fam'> {mother.name} </div> </Link>
           }
       
           {
             !father ? ''
-              : <Link to={`/family-tree/${father.name}`} ><div className='father-container'> {father.name} </div> </Link>
+              : <Link to={`/family-tree/${father.name}`} ><div className='father-container single-fam'> {father.name} </div> </Link>
           }
       
       

@@ -1,27 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-@import '~bulma/bulma.sass';
 
+
+@font-face {
+  font-family: 'olympus' ;
+  src: url('../assets/fonts/olympus/olympus.TTF')
+}
 
 body{
   font-size: 30px;
   font-family: 'Roboto', sans-serif;
 }
 
+.single-fam {
+  font-family: 'olympus';
+  font-size: 5vw;
+  width: auto;
+  border: 10px solid grey;
+  padding: 10px;
 
-.h-line {
-   width: 100%;
-  padding: 0 10px 0 ;
 }
 
-hr{
+
+.h-line {
+  width: 100%;
+  padding: 0 10px 0 ;
+  hr{
   color: rgb(191, 255, 0);
 }
 
+}
 
-.god-container  {
+
+
+.god-row, .daughter-container {
   border: 2px dotted red;
   display: flex;
   justify-content: space-between;
+  flex-wrap: nowrap;
 }
 
 .spouse-container{
@@ -30,6 +45,7 @@ hr{
   justify-content: center;
   border: 5px rgb(119, 255, 0) solid;
   border-right: 5px red solid;
+  flex-wrap: nowrap;
 }
 
 .spouse { 
@@ -43,3 +59,16 @@ hr{
   display: flex;
 flex-direction:row;
 }
+
+.all-gods-container {
+  position: relative;
+}
+
+.main-god {
+  position: absolute;
+  top:50%;
+  left: 42%;
+}
+
+
+@import '~bulma/bulma.sass';
