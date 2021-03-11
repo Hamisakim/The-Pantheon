@@ -1,74 +1,182 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
-
 @font-face {
-  font-family: 'olympus' ;
-  src: url('../assets/fonts/olympus/olympus.TTF')
-}
-
-body{
-  font-size: 30px;
-  font-family: 'Roboto', sans-serif;
-}
-
-.single-fam {
   font-family: 'olympus';
-  font-size: 5vw;
-  width: auto;
-  border: 10px solid grey;
-  padding: 10px;
-
+  src: url('../assets/fonts/olympus/olympus.TTF');
 }
 
+// body{
+//   font-size: 30px;
+//   font-family: 'Roboto', sans-serif;
+// }
 
-.h-line {
-  width: 100%;
-  padding: 0 10px 0 ;
-  hr{
-  color: rgb(191, 255, 0);
-}
+// .single-fam {
+//   font-family: 'olympus';
+//   font-size: 5vw;
+//   width: auto;
+//   //border: 10px solid grey;
+//   padding: 10px;
 
-}
+// }
 
+// .h-line {
+//   width: 100%;
+//   padding: 0 10px 0 ;
+// }
 
+// hr{
+//   color: rgb(191, 255, 0);
+// }
 
-.god-row, .daughter-container {
-  border: 2px dotted red;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-}
+// .god-row, .daughter-container {
+//   //border: 2px dotted red;
+//   display: flex;
+//   justify-content: space-between;
+//   flex-wrap: nowrap;
+// }
 
-.spouse-container{
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  border: 5px rgb(119, 255, 0) solid;
-  border-right: 5px red solid;
-  flex-wrap: nowrap;
-}
+// .spouse-container{
+//   width: 50%;
+//   display: flex;
+//   justify-content: center;
+//   //border: 5px rgb(119, 255, 0) solid;
+//   //border-right: 5px red solid;
+//   flex-wrap: nowrap;
+// }
 
-.spouse { 
-  width: 25%;
-  display: flex;
-  justify-content: flex-start;
-  border: 5px rgb(0, 255, 200) solid;
-}
+// .spouse {
+//   width: 25%;
+//   display: flex;
+//   justify-content: flex-start;
+//   //border: 5px rgb(0, 255, 200) solid;
+// }
 
-.sisters{
-  display: flex;
-flex-direction:row;
+// .sisters{
+//   display: flex;
+// flex-direction:row;
+// }
+
+// .all-gods-container {
+//   position: relative;
+// }
+
+// .main-god {
+//   position: absolute;
+//   top:50%;
+//   left: 42%;
+// }
+
+.body {
+  max-width: 100vw;
 }
 
 .all-gods-container {
-  position: relative;
+  //border: 1px red dotted;
+  display: flex;
+  flex-direction: column;
+  font-family: 'olympus';
+  // font-size: 5vw;
+  width: auto;
+  height: 80vh;
+
+  .god-row {
+    //border: 1px blue dotted;
+    display: flex;
+    flex-flow: row wrap;
+    border-top: none;
+
+    justify-content: space-around;
+    align-items: center;
+    font-size: 50px;
+    height: auto;
+    border-bottom: 1px solid red;
+  }
+
+  .spouse-row {
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+
+    border-bottom: none;
+  }
+
+  .main-row {
+    // position: relative;
+  }
+
+  .sibling-row {
+    //position: relative;
+    display: flex;
+    height: auto;
+
+    justify-content: space-around;
+    border-bottom: none;
+
+  }
+
+  .children-row {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px red solid;
+    
+    border-bottom: none;
+  }
+
+  .sibling-container {
+    display: flex;
+    flex-direction: row;
+    justify-self: flex-start;
+  }
+
+  .child-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .single-fam {
+    //border: 1px green dotted;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    padding: 0 10px;
+  }
+
+  .main-god {
+    height: 300px;
+    font-size: 100px;
+    
+    img{ height: 50%;
+    margin-top: -10%;}
+
+    p{
+
+    }
+  }
+
+  .spouse-row {
+    border-right: 1px solid red;
+  }
+
+  .v-line {
+    border-right: 1px solid orange;
+    height: 30px;
+  
+    margin-top: 0px;
+  }
 }
 
-.main-god {
-  position: absolute;
-  top:50%;
-  left: 42%;
+.father-container{
+  .v-line{
+    margin-bottom: 0;
+  }
 }
 
+* {
+  //border: 0px solid red;
+}
 
 @import '~bulma/bulma.sass';

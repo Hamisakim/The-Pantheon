@@ -5,6 +5,8 @@ import FamilyTree from './components/FamilyTree'
 import HomePage from './components/HomePage'
 import NavBar from './components/NavBar'
 import GodsList from './components/GodsList'
+import RandomGod from './components/RandomGod'
+
 function App() {
   return (
     <>
@@ -24,8 +26,10 @@ function App() {
             <FamilyTree />
           </Route>
 
-
-
+          <Route path= '/random'>
+            <RandomGod />
+          </ Route>
+          
         </Switch>
       </BrowserRouter>
     </>

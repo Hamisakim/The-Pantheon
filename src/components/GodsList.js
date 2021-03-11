@@ -23,11 +23,11 @@ const GodsList = () => {
     <>
       {console.log('gods person=>', godListData.persons)}
 
-      <ul>
+      <ul id="slider">
         {godListData.persons.map(god => {
           return (
             <Link key={god.name}to={`/family-tree/${god.name}`}>
-              <li key={god.personID}> {god.name}</li> 
+              <li className='single-fam god-list' key={god.personID}> {god.name}</li> 
             </Link>
           )
         })}
