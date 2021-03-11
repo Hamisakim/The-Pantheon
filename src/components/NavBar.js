@@ -15,8 +15,13 @@ const Navbar = () => {
         <div className='navbar-brand'>
           <Link to='/'>
             <span role='img' aria-label='logo' className='title'>
-              Ω
+            🔱
             </span>
+          </Link>
+        </div>
+        < div className='navbar-start'>
+          <Link to='/gods-list' className='navbar-item'>
+            Gods
           </Link>
         </div>
         < div className='navbar-start'>

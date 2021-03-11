@@ -1,55 +1,62 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-
+import { useParams } from 'react-router-dom'
 const FamilyTree = () => {
   const [godData, setGodData] = useState(null)
 
-  // console.log('🚀 ~ file: FamilyTree.js ~ line 6 ~ FamilyTree ~ godData, setGodData', godData, setGodData)
+  const params = useParams()
+  console.log('TEST -> params', params)
 
   useEffect(() => {
     const getData = async () => {
       const { data } = await axios.get(
         // 'https://cors-anywhere.herokuapp.com/https://anfi.tk/greekApi/person/en/Cronos'
-        // 'https://cors-proxy.htmldriven.com/?url=https://anfi.tk/greekApi/person/en/Cronos'
-        'https://api.allorigins.win/raw?url=https://anfi.tk/greekApi/person/en/Cronos'
+
+        'https://api.allorigins.win/raw?url=https://anfi.tk/greekApi/person/en/Rhea'
       )
-      //console.log(response[0])
+
       setGodData(data)
     }
     getData()
   }, [])
 
+  if (!godData) return null
 
+  const isThereHusband = () => {
+    console.log('HusbandData', godData)
+    if (!godData.husband && (godData.wife === true)) {
+      console.log(godData.wife[0].name)
+      return godData.wife[0].name
+    } else if (!godData.wife && (godData.husband === true)) {
+      console.log(godData.husband[0].name)
+      return godData.husband[0].name
+    } else {
+      console.log('no data')
+      return ''
+    }
+  }
 
-  if (!godData ) return null 
-  // const { wife } = godData
-  // const wife2 = wife[0]
-  // console.log('TEST -> wife2', wife
- 
   return (
     <>
       {console.log('TEST -> godData', godData)}
-      {/* {console.log('TEST -> SPOUSE', wife2 )} */}
 
-
-      {/* {console.log('TEST -> godData.mother', godData.mother)} */}
-
-      <h1> test</h1>
       <div className='family-tree-container'>
         <div className='main-container'></div>
       </div>
 
       <main>
         <div className='parent container'>
-          <div>{godData.mother.name}</div> 
+          <div>{godData.mother.name}</div>
           <div>{godData.father.name}</div>
         </div>
 
         <div className='container'>
           <div className='brothers '>
-            {/* {godData.brother.map((sibling) => {
-              return <div key={sibling.name}>{sibling.name}</div>
-            })} */}
+            {!godData.brother
+              ? ''
+              : godData.brother.map((sibling) => {
+                return <div key={sibling.personID}>{sibling.name}</div>
+              })}
           </div>
 
           <div className='h-line'>
@@ -63,26 +70,38 @@ const FamilyTree = () => {
           </div>
 
           <div className='sisters '>
-            {/* {godData.sister.map((sibling, index) => {
-              return <div>{sibling[index].name}</div>
-            })} */}
+            {!godData.sister
+              ? ''
+              : godData.sister.map((sibling) => {
+                return <div key={sibling.personID}>{sibling.name}</div>
+              })}
           </div>
-        </div>
 
-        <div className='spouse-container'>
-          <div className='spouse'>{ godData.wife[0].name }</div>
-        </div>
-
-        <div className='children container'>
-          <div>
-            {/* {godData.daughter.map((child, index) => {
-              return <div>{child[index].name}</div>
-            })} */}
+          <div className='spouse-container'>
+            <div className='spouse'>
+              {
+                <div>{isThereHusband()}</div>
+                
+              }
+            </div>
           </div>
-          <div>
-            {/* {godData.son.map((child, index) => {
-              return <div>{child[index].name}</div>
-            })} */}
+
+          <div className='children container'>
+            <div>
+              {!godData.daughter
+                ? ''
+                : godData.daughter.map((child) => {
+                  return <div key={child.personID}>{child.name}</div>
+                })}
+            </div>
+
+            <div>
+              {!godData.son
+                ? ''
+                : godData.son.map((child) => {
+                  return <div key={child.personID}>{child.name}</div>
+                })}
+            </div>
           </div>
         </div>
       </main>
