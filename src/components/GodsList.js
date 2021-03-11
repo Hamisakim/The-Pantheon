@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 const GodsList = () => {
   const [godListData, setGodListData] = useState(null)
@@ -24,7 +25,11 @@ const GodsList = () => {
 
       <ul>
         {godListData.persons.map(god => {
-          return <li key={god.personID}> {god.name}</li>
+          return (
+            <Link key={god.name}to={`/family-tree/${god.name}`}>
+              <li key={god.personID}> {god.name}</li> 
+            </Link>
+          )
         })}
       </ul>
       
