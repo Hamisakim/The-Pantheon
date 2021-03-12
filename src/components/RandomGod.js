@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
 const RandomGod = () => {
+
+
+
+  
   const [randomGod, setRandomGod] = useState(null)
   useEffect(() => {
     const getData = async () => {
@@ -17,7 +21,9 @@ const RandomGod = () => {
   if (!randomGod) return null
 
   return (
-    <>{console.log(randomGod.name)}</>
+    <div >
+      {console.log(randomGod.name)}
+    </div>
   )
 }
 

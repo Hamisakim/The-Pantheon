@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
@@ -23,7 +24,9 @@ const FamilyTree = () => {
     getData()
   }, [selectedName])
 
-  if (!godData) return null
+  if (!godData) return <div className="loading-image">
+    <img src="https://png.pngtree.com/png-clipart/20200720/original/pngtree-spartan-helmet-logo-design-png-image_4752827.jpg" alt="spartan image" />
+  </div>
   // eslint-disable-next-line no-unused-vars
   const {
     name,
@@ -40,14 +43,21 @@ const FamilyTree = () => {
   // eslint-disable-next-line no-unused-vars
   const haveWife = () => { 
     let spouseName = ''
+    // eslint-disable-next-line quotes
+   // let html = ''
     if (!husband && !wife){
-      spouseName = ''
+     // spouseName = ''
+     // html = null
     } else if (!husband){
       spouseName = wife[0].name
+     // html = 
     } else if (!wife) {
       spouseName = husband[0].name
+     // html = <p className='relation-tag'>husband</p>
     }
-    return spouseName
+    return ( spouseName
+    
+    )
   }
 
   return (
@@ -58,7 +68,8 @@ const FamilyTree = () => {
           {!mother ? '' : 
             <Link to={`/family-tree/${mother.name}`} >
               <div className='mother-container single-fam'> 
-                {mother.name} 
+                <p>  {mother.name}   </p>
+                <p className='relation-tag'>mother</p>
                 <div className='v-line'></div>
               </div>
             </Link>
@@ -67,7 +78,8 @@ const FamilyTree = () => {
           {!father ? '' :
             <Link to={`/family-tree/${father.name}`} >
               <div className='father-container single-fam'> 
-                {father.name} 
+                <p>  {father.name}   </p>
+                <p className='relation-tag'>father</p>
                 <div className='v-line'></div>
               </div> 
             </Link>
@@ -76,7 +88,6 @@ const FamilyTree = () => {
       
         </div> {/* parents container */}
     
-
         <div className='sibling-row god-row '> {/*sibling-row row, contains siblings and main god */} 
         
           <div className='brother-container sibling-container'> {/* Contains just brothers*/}  
@@ -87,7 +98,8 @@ const FamilyTree = () => {
                   <Link key={brother.personID}to={`/family-tree/${brother.name}`}> 
                     <div className='single-fam'>
                       <div className='v-line'></div>
-                      {brother.name} 
+                      <p>   {brother.name}   </p>
+                      <p className='relation-tag'>brother</p>
                     </div>
                   </Link>
                 )
@@ -104,7 +116,8 @@ const FamilyTree = () => {
                   <Link key={sister.personID}to={`/family-tree/${sister.name}`}> 
                     <div className='single-fam'>
                       <div className='v-line'></div>
-                      {sister.name} 
+                      {sister.name}   
+                      <p className='relation-tag'>sister</p>
                     </div>
                   </Link>
                 )
@@ -112,23 +125,23 @@ const FamilyTree = () => {
           </div>
         </div> {/* sibling-row row closing tag */}
 
-
         <div className='main-row god-row'>
           <div className='main-god single-fam'> 
 
-            <p>{name} </p>
+            <p>{name}</p>
 
             <img src='https://static.thenounproject.com/png/1764444-200.png' />
           </div>  {/* Main god focus */}
         </div>
 
-
-
         <div className='spouse-row god-row'>
           <div className='spouse single-fam'> 
+          
             <Link to={`/family-tree/${haveWife()}`}> 
               {haveWife()}
+              {!haveWife ?  <p className='relation-tag'>husband</p> : ''}
             </Link>
+
           </div>
         </div> { /* spouse row */}
 
@@ -137,11 +150,12 @@ const FamilyTree = () => {
             {!daughter ? '' :
               daughter.map((daughter) => {
                 return (
-                 
+
                   <Link key={daughter.personID}to={`/family-tree/${daughter.name}`}> 
                     <div className='single-fam'>
                       <div className='v-line'></div>
-                      {daughter.name} 
+                      <p> {daughter.name}   </p>
+                      <p className='relation-tag'>daughter</p>
                     </div>
                   </Link>
                 )
@@ -155,7 +169,8 @@ const FamilyTree = () => {
                   <Link key={son.personID}to={`/family-tree/${son.name}`}> 
                     <div className='single-fam'>
                       <div className='v-line'></div>
-                      {son.name} 
+                      <p>{son.name} </p>
+                      <p className='relation-tag'>son</p>
                     </div>
                   </Link>
                 )

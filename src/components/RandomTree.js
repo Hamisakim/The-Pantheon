@@ -10,6 +10,10 @@ const FamilyTree = () => {
 
   useEffect(() => {
     const getData = async () => {
+      const { persons  } = await axios.get('https://api.allorigins.win/raw?url=https://anfi.tk/greekApi/person/random' )
+
+      console.log('TEST',persons)
+      
       const { data } = await axios.get(
         // 'https://cors-anywhere.herokuapp.com/https://anfi.tk/greekApi/person/en/Cronos'
         'https://api.allorigins.win/raw?url=https://anfi.tk/greekApi/person/random'

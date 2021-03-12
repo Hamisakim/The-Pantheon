@@ -3,30 +3,13 @@ import React, { useEffect  } from 'react'
 
 // eslint-disable-next-line no-unused-vars
 import { Link, useLocation } from 'react-router-dom'
-
+import { getRandomNumber } from './helpers/helpers'
 const Navbar = () => {
   
 
-  // const getRandomNumber = () => {
-  //   return parseint(Math.random()*data.length)
-  // }
-
-  // const location = useLocation()
-  // useEffect(() => {
-  //   // re-render Navbar when url changes
-  // }, [location.pathname])
-  // console.log('TEST -> location.pathname', location.pathname)
-
-  // const onRandom = () => {
-  //   if( location.pathname === '/random'){
-  //     console.log('we are random')
-
-  //   }
-
-  // }
 
 
-
+  
   return (
     <nav className='navbar is-dark'>
       <div className='container'>
@@ -45,7 +28,7 @@ const Navbar = () => {
 
 
 
-        <div className='navbar-start'>
+        <div className='navbar-start' onClick={getRandomNumber()}>
           <Link to='/random'
             className='navbar-item'>
             Random
