@@ -23,7 +23,7 @@ const FamilyTree = () => {
   }, [selectedName])
 
   if (!godData) return <div className="loading-image">
-    <img src="https://png.pngtree.com/png-clipart/20200720/original/pngtree-spartan-helmet-logo-design-png-image_4752827.jpg" alt="spartan image" />
+    <img src="https://i.pinimg.com/originals/f1/96/72/f19672c5028e8b9d49d8b3cbd49be4d7.png" alt="spartan image" />
   </div>
 
   const {
@@ -130,7 +130,9 @@ const FamilyTree = () => {
         <div className='main-row god-row'>
           <div className='main-god single-fam'> 
 
-            <p>{name}</p>
+
+
+            <p className='main-name'>{name}</p>
 
             <img src='https://static.thenounproject.com/png/1764444-200.png' />
           </div>  {/* Main god focus */}

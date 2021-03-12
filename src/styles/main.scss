@@ -5,6 +5,8 @@
   src: url('../assets/fonts/olympus/olympus.TTF');
 }
 
+
+$bgimage: url('https://cdn.wallpapersafari.com/13/88/CXQPFJ.jpg');
 $grape: darkslateblue;
 $wine: maroon;
 $bronze: #d27a25;
@@ -28,11 +30,10 @@ $potColour: black;
   display: flex;
   flex-direction: column;
   font-family: 'olympus';
-  // font-size: 5vw;
+
   width: auto;
   height: 100vh;
-  // background-image: url('https://w.wallhaven.cc/full/9m/wallhaven-9m5owx.jpg');
-  // background-size: cover;
+
   background-image: url('https://cdn.wallpapersafari.com/13/88/CXQPFJ.jpg');
   background-size: cover;
   background-position: center;
@@ -61,9 +62,7 @@ $potColour: black;
     border-bottom: none;
   }
 
-  .main-row {
-    // position: relative;
-  }
+
 
   .sibling-row {
     //position: relative;
@@ -104,7 +103,6 @@ $potColour: black;
 
     height: 100%;
     padding: 0 10px;
-
   }
 
   .main-god {
@@ -132,25 +130,44 @@ $potColour: black;
   }
 }
 
-.relation-tag{
+.relation-tag {
   font-size: 18px;
   margin-top: -20px;
   text-align: center;
 }
 
-.god-list-container{
+.god-list-container {
+  //background-image: $bgimage;
+
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  li{
+  li {
     display: flex;
-
     font-size: 30px;
     //border: 1px red solid;
     margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'olympus';
+    text-align: center;
+    font-size: 50px;
+    width: 450px;
+    height: 300px;
+    padding: 0;
+    margin:0px;
+    // border: 10px solid darkblue;
+    background-image: url('../assets/images/scroll-background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+    
+    vertical-align: middle;
+    list-style: none;
   }
-
 }
 
 //? ********************************************************************************
@@ -162,21 +179,7 @@ $potColour: black;
   display: flex;
   flex-wrap: wrap;
 }
-.slides {
-  font-family: 'olympus';
-  text-align: center;
-  font-size: 50px;
-  width: 450px;
-  height: 300px;
-  padding: 0;
-  // border: 10px solid darkblue;
-  background-image: url('../assets/images/scroll-background.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  vertical-align: middle;
-  list-style: none;
-}
+
 //* ********************** STYLING FOR LOADING IMAGE ******************************
 .loading-image {
   position: relative;
@@ -211,11 +214,14 @@ $potColour: black;
   position: relative;
   margin: auto;
   display: block;
-  border: solid 4px red;
-  height: 1000px;
+  //border: solid 4px red;
+  height: 100vh;
   width: auto;
   overflow: hidden;
-}
+  background-image: url('https://cdn.wallpapersafari.com/13/88/CXQPFJ.jpg');
+  background-size: cover;
+  background-position: center;
+
 .base {
   position: absolute;
   top: 37.5%;
@@ -233,40 +239,20 @@ $potColour: black;
   left: 50%;
   width: 15%;
   height: 15%;
-  background: transparent;
-  border: 10px ridge $potColour;
+  background: black;
   border-radius: 50%;
   z-index: 1;
 }
-.large-handle-left {
+
+.large-handle-inner-right{
   position: absolute;
-  top: 40%;
-  right: 50%;
-  width: 15%;
-  height: 15%;
-  background: transparent;
-  border: 10px ridge $potColour;
   border-radius: 50%;
-  z-index: 1;
+  background: url('https://cdn.wallpapersafari.com/13/88/CXQPFJ.jpg');
+  top:10%;
+  height:80%;
+  width:60%;
+  left:30%;
 }
-// .large-handle-inner-left{
-//   position: absolute;
-//   border-radius: 50%;
-//   background: white;
-//   top: 10%;
-//   height:80%;
-//   width:60%;
-//   left: 10%;
-// }
-// .large-handle-inner-right{
-//   position: absolute;
-//   border-radius: 50%;
-//   background: white;
-//   top:10%;
-//   height:80%;
-//   width:60%;
-//   left:30%;
-// }
 .stem {
   position: absolute;
   width: 10%;
@@ -308,10 +294,11 @@ $potColour: black;
 .handle-left {
   position: absolute;
   top: 8%;
-  width: 60%;
+  width: 50%;
   left: -30%;
   height: 89%;
-  background: white;
+  background: url('https://cdn.wallpapersafari.com/13/88/CXQPFJ.jpg');
+  background-size: cover;
   border-radius: 50%;
 }
 .handle-right {
@@ -320,7 +307,7 @@ $potColour: black;
   width: 60%;
   right: -30%;
   height: 89%;
-  background: white;
+  background: url('https://cdn.wallpapersafari.com/13/88/CXQPFJ.jpg');
   border-radius: 50%;
 }
 
@@ -522,25 +509,22 @@ $potColour: black;
   width: 10%;
   left: 45%;
   background-color: $steel;
-  rotate: -15deg;
 }
 .sword-hilt {
   position: absolute;
   height: 10%;
   width: 6%;
   background: repeating-linear-gradient(-45deg, #920027, #920027 5px, black 5px, black 10px);
-  top: 20%;
-  left: 31%;
-  rotate: -15deg;
+  top: 19%;
+  left: 47%;
 }
 .sword-guard {
   position: absolute;
   height: 3%;
   width: 25%;
   background-color: $bronze;
-  left: 25%;
+  left: 38%;
   top: 29%;
-  rotate: -15deg;
   border: 3px outset $shield;
 }
 
@@ -551,8 +535,7 @@ $potColour: black;
   top: 14%;
   height: 8%;
   width: 10%;
-  left: 26%;
-  rotate: -15deg;
+  left: 43%;
   border: 7px inset $shield;
 }
 .sword-shield {
@@ -577,12 +560,34 @@ vines-1 {
 .homepage-text {
   position: absolute;
   text-align: center;
-  top: 16%;
-  left: 35%;
-  font-size: 60px;
+  top: 5%;
+  left: 37.5%;
+  font-size: 80px;
   font-family: 'olympus';
   width: auto;
 }
+
+.about-page-text {
+  position: absolute;
+  font-family: 'olympus';
+  font-size: 32px;
+  width:30%;
+  top:25%;
+  left:8%;
+
+}
+// .iframe-container {
+//   position: absolute;
+// }
+// iframe{
+//   position:absolute;
+//   right: 20%;
+//   top:20%;
+//   height:60%;
+//   width:40%;
+//   z-index: 3;
+
+// }
 
 // #mountain-1 {
 //   position: absolute;
@@ -614,8 +619,109 @@ vines-1 {
   background: darkgreen;
   border-radius: 50%;
 } */
+}
+// @import '~bulma/bulma.sass';
 
-@import '~bulma/bulma.sass';
+
+.navbar{
+  font-family: 'olympus';
+  font-size: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+background: rgb(215,167,92);
+background: linear-gradient(202deg, rgba(215,167,92,1) 0%, rgba(203,140,56,1) 93%);
+    border-bottom: 5px $bronze solid;
+
+
+}
+
+  .navbar-start{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+  
+  }
+.container{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.filter-container{
+  font-family: olympus;
+  height: 50%;
+}
+
+.filter-container {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+
+  fieldset{
+    border:grey 2px solid;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+
+  }
+
+  #input-field{
+    background-color: rgba($color: #7dacba, $alpha: 0.4);
+    border-radius: 10px;
+        border: rgb(255, 0, 0);
+  }
+}
+
+.button-container{
+  display: flex;
+  justify-content: center;
+}
+
+
+button {
+  margin: 20px;
+  box-shadow: 3px 4px 0px 0px #8a2a21;
+  background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+  background-color:#c62d1f;
+  border-radius:18px;
+  border:1px solid #d02718;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:17px;
+  padding:7px 25px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #810e05;
+}
+button:hover {
+  background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+  background-color:#f24437;
+}
+button:active {
+  position:relative;
+  top:1px;
+}
+
+#root{
+  height:100vh
+}
+
+.god-list-component{
+  background-image: url('https://cutewallpaper.org/21/hd-parchment-background/Parchment-HD-Wallpapers.jpg');
+align-items: center; 
+min-height: 100%;
+}
+
+
+// .main-name{
+//   margin: 0;
+// }
 
 a {
   color: #000000bb;
@@ -624,4 +730,14 @@ a {
 }
 a :hover {
   color: black;
+}
+
+p{
+  margin: 0px;
+}
+.relation-tag{
+  margin: 10px;
+}
+.main-name  {
+  margin-bottom: 40px;
 }

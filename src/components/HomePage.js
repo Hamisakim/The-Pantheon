@@ -8,7 +8,9 @@ const HomePage = () => {
         <div className="mountains">
           <div id="mountain-1"></div>
         </div>
-        <p className="homepage-text">The Pantheon</p>
+        <div className="homepage-text">The Pantheon</div>
+        <div className="about-page-text">This app provides a family tree of your selected Greek God, <br/> King or Hero. <br/>choose from over 200 Entries and view lineages spanning three generations!  </div>
+
         <div className="vines">
           <div id="vines-1"></div>
         </div>
@@ -28,9 +30,9 @@ const HomePage = () => {
           <div className="handle-left"></div>
           <div className="handle-right"></div>
         </div>
-        <div className="centre-for-card-border">
+        {/* <div className="centre-for-card-border">
           <div className="centre-for-card"></div>
-        </div>
+        </div> */}
         <div className="rim"></div>
   
         <div className="grapes-bunch" id="bunch-1">

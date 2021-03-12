@@ -15,9 +15,10 @@ const GodFilter = (props) => {
 
   return (
     <div className='filter-container'>
+      
       <fieldset>
         <legend> Search here </legend>
-        <label>Choose a region from the drop down or search by <b>full</b> country name </label>
+        <label>Choose a God from the drop down or search by name </label>
         <input id='input-field'  list='god-list-dropdown' onChange={handleFilter} />
         <datalist id='god-list-dropdown'>
           {gods.map((god)=>{
@@ -26,6 +27,7 @@ const GodFilter = (props) => {
         </datalist>
         <button id='clear-btn' onClick={clearField}>Clear Field </button>
       </fieldset>
+      
     </div>
   )
 }

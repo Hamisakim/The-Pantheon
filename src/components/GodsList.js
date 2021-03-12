@@ -28,11 +28,13 @@ const GodsList = () => {
 
   return (
     <>
-      <button id='show-all-btn' onClick={() => setUserInput('')}> Show All</button>
-      <GodFilter godListData={godListData} userInput={userInput} onChange={handleFilter} />
-      <GodListDisplay godArray={godListData}userInput={userInput} onChange={handleFilter}/>
+      <div className='god-list-component'>
 
-      
+        <GodFilter godListData={godListData} userInput={userInput} onChange={handleFilter} />
+        <div className='button-container'> <button id='show-all-btn' onClick={() => setUserInput('')}> Show All</button> </div>
+        <GodListDisplay godArray={godListData}userInput={userInput} onChange={handleFilter}/>
+
+      </div>
     </>
   )
 }
