@@ -9,9 +9,7 @@ import { Link, useParams } from 'react-router-dom'
 const FamilyTree = () => {
   const [godData, setGodData] = useState(null)
 
-  // eslint-disable-next-line no-unused-vars
   const { selectedName } = useParams()
-
 
   useEffect(() => {
     const getData = async () => {
@@ -27,7 +25,7 @@ const FamilyTree = () => {
   if (!godData) return <div className="loading-image">
     <img src="https://png.pngtree.com/png-clipart/20200720/original/pngtree-spartan-helmet-logo-design-png-image_4752827.jpg" alt="spartan image" />
   </div>
-  // eslint-disable-next-line no-unused-vars
+
   const {
     name,
     mother,
@@ -40,25 +38,31 @@ const FamilyTree = () => {
     husband,
   } = godData
 
-  // eslint-disable-next-line no-unused-vars
   const haveWife = () => { 
     let spouseName = ''
-    // eslint-disable-next-line quotes
-   // let html = ''
     if (!husband && !wife){
-     // spouseName = ''
+      spouseName = ''
      // html = null
     } else if (!husband){
       spouseName = wife[0].name
-     // html = 
     } else if (!wife) {
       spouseName = husband[0].name
-     // html = <p className='relation-tag'>husband</p>
     }
-    return ( spouseName
-    
-    )
-  }
+  return spouseName 
+      }
+
+  const spouseTag = () => { 
+   let gender = ''
+    if (!husband && !wife){
+      gender = ''
+    } else if (!husband){
+      gender = 'wife'
+    } else if (!wife) {
+        gender = 'husband'
+    }
+  return gender
+    }
+
 
   return (
     <>
@@ -92,7 +96,6 @@ const FamilyTree = () => {
         
           <div className='brother-container sibling-container'> {/* Contains just brothers*/}  
             {!brother ? '' :
-              
               brother.map((brother) => {
                 return (
                   <Link key={brother.personID}to={`/family-tree/${brother.name}`}> 
@@ -109,9 +112,8 @@ const FamilyTree = () => {
 
                 
           <div className='sister-container sibling-container'>   {/* contains just sisters */ }
-            {!sister
-              ? ''
-              : sister.map((sister) => {
+            {!sister ? '' : 
+              sister.map((sister) => {
                 return (
                   <Link key={sister.personID}to={`/family-tree/${sister.name}`}> 
                     <div className='single-fam'>
@@ -139,8 +141,10 @@ const FamilyTree = () => {
           
             <Link to={`/family-tree/${haveWife()}`}> 
               {haveWife()}
-              {!haveWife ?  <p className='relation-tag'>husband</p> : ''}
+            <p className='relation-tag'>{spouseTag()}</p>
             </Link>
+              
+
 
           </div>
         </div> { /* spouse row */}
