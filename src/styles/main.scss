@@ -16,9 +16,10 @@ $steel: grey;
 $shield: rgb(110, 67, 14);
 $potColour: black;
 
-.body {
+body {
   max-width: 100vw;
   height: 100vh;
+  margin: 0 !important;
   background-image: url('https://w.wallhaven.cc/full/9m/wallhaven-9m5owx.jpg');
   background-size: cover;
 }
@@ -708,14 +709,15 @@ button:active {
   top:1px;
 }
 
-#root{
-  height:100vh
-}
+// #root{
+//   height:100vh
+// }
 
 .god-list-component{
   background-image: url('https://cutewallpaper.org/21/hd-parchment-background/Parchment-HD-Wallpapers.jpg');
 align-items: center; 
 min-height: 100%;
+height: 100vh;
 }
 
 
