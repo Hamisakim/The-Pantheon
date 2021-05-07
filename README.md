@@ -3,7 +3,7 @@
 *  [Sami Hakim](https://github.com/hamisakim) 
 *  [Jesse Edwards](https://github.com/JedwardsK) 
 
-# Deployed app here    [The pantheon](https://thepantheon.netlify.app/) 
+# Deployed app here    [The Pantheon](https://thepantheon.netlify.app/) 
 # Project Overview - 48 hours
 This app provides a family tree of your selected Greek God, King or Hero. Choose from over 200 Entries and view lineages spanning three generations
 <img width="1423" alt="Screenshot 2021-05-07 at 14 19 11" src="https://user-images.githubusercontent.com/76621344/117462809-ec2ee580-af46-11eb-87d2-46876b4a199e.png">
@@ -128,10 +128,15 @@ This was the first real pair-coded project. We had to use zoom and slack to comm
 
 Great to work with and solve problems together, but also a lesson on how to work separately on the same project. 
 
+# Walkthrough 
+Users can go to the All Gods Section from the navbar
+
+<img width="1440" alt="Screenshot 2021-05-07 at 15 17 32" src="https://user-images.githubusercontent.com/76621344/117463233-59427b00-af47-11eb-92ca-a93ef305deb1.png">
+From here they can either search or choose from the drop down, or browse them all!
+
+<img width="1440" alt="Screenshot 2021-05-07 at 15 18 14" src="https://user-images.githubusercontent.com/76621344/117463344-7414ef80-af47-11eb-8ae8-43584b286eaa.png">
 
 
 
-
-
-
-
+After selecting they will be taken to the Family Tree. From here users can choose any family members to be taken to their family tree
+<img width="1440" alt="Screenshot 2021-05-07 at 15 19 58" src="https://user-images.githubusercontent.com/76621344/117463544-b4746d80-af47-11eb-88fc-f0c8b2466b0f.png">
