@@ -17,7 +17,7 @@ This app provides a family tree of your selected Greek God, King or Hero. Choose
 Build a front-end application consuming an external API.
 
 # Approach Taken
-We began by brainstorming ideas for cool projects to do and eventually we found this [greekmyths · Apiary](https://greekmythology1.docs.apiary.io/) However it was not working but we were set on the idea around Greek Myhtology.  We found another partly completed API which we figured we’d be able to use and get the most out of, given the short time frame [GitHub - newsh/GreekAPI: Web API for Greek Mythology data](https://github.com/newsh/GreekAPI)
+We began by brainstorming ideas for cool projects to do and eventually we found this [greekmyths · Apiary](https://greekmythology1.docs.apiary.io/) However it was not working but we were set on the idea around Greek Mythology.  We found another partly completed API which we figured we’d be able to use and get the most out of, given the short time frame [GitHub - newsh/GreekAPI: Web API for Greek Mythology data](https://github.com/newsh/GreekAPI)
 After finding this we began working! 
 
 We worked on our routes, and getting the right data visualising this through Insomnia.
