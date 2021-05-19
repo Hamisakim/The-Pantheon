@@ -13,14 +13,25 @@ This app provides a family tree of your selected Greek God, King or Hero. Choose
 1. `yarn`
 2. `yarn start`
 
+# Technologies used
+* React hooks
+* SASS
+* Axios
+* Insomnia
+
 # Project brief
 Build a front-end application consuming an external API.
 
 # Approach Taken
 We began by brainstorming ideas for cool projects to do and eventually we found this [greekmyths · Apiary](https://greekmythology1.docs.apiary.io/) However it was not working but we were set on the idea around Greek Mythology.  We found another partly completed API which we figured we’d be able to use and get the most out of, given the short time frame [GitHub - newsh/GreekAPI: Web API for Greek Mythology data](https://github.com/newsh/GreekAPI)
 After finding this we began working! 
+Once we decided on the family tree we worked together in getting the right data from the API. 
+We used a combination of Live Share and pair coding over Zoom to build this. To avoid merging code we used a single reposirotry.
 
-We worked on our routes, and getting the right data visualising this through Insomnia.
+We really free-styled the build and made decisons on the fly together. Knowing we had little time we didn't want to waste it!
+
+
+
 # My highlights
 I worked on the list page: 
 <img width="1421" alt="Screenshot 2021-05-07 at 14 38 33" src="https://user-images.githubusercontent.com/76621344/117462822-efc26c80-af46-11eb-8d8a-f66c4027641a.png">
@@ -68,7 +79,7 @@ export default GodFilter
 ### Challenges! 
 We ran into a few! 
 * Styling the family tree to work with complicated relationships. 
-* Due to the way the data was nested the spousal status of the God also caused issues! We had to write two functions to render the correct	name of spouse and to render if it was a husband or wife! 
+* Due to the way the data was nested the spousal status of the God also caused issues! We had to write two functions to render the correct name of spouse and to render if it was a husband or wife! 
 
 ``` javascript
 {
@@ -119,6 +130,20 @@ We ran into a few!
   return gender
     }
 ```
+
+We Also ran into cors issue! We were able to find a solution using the below.
+```
+useEffect(() => {
+    const getData = async () => {
+      const { data } = await axios.get(
+        `https://api.allorigins.win/raw?url=https://anfi.tk/greekApi/person/en/${selectedName}`
+      )
+      setGodData(data)
+    }
+    getData()
+  }, [selectedName])
+  ```
+
 ### Wins
 * Getting a cool working app deployed with the unsurprisingly scarce amount of mythological Greek APIs out there ! 
 * Getting a working family-tree styling wise! 
