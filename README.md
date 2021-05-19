@@ -5,7 +5,7 @@
 
 # Deployed app here    [The Pantheon](https://thepantheon.netlify.app/) 
 # Project Overview - 48 hours
-This app provides a family tree of your selected Greek God, King or Hero. Choose from over 200 Entries and view lineages spanning three generations
+This app provides a family tree of your selected Greek God, King, or Hero. Choose from over 200 Entries and view lineages spanning three generations
 <img width="1423" alt="Screenshot 2021-05-07 at 14 19 11" src="https://user-images.githubusercontent.com/76621344/117462809-ec2ee580-af46-11eb-87d2-46876b4a199e.png">
 
 
@@ -26,9 +26,9 @@ Build a front-end application consuming an external API.
 We began by brainstorming ideas for cool projects to do and eventually we found this [greekmyths · Apiary](https://greekmythology1.docs.apiary.io/) However it was not working but we were set on the idea around Greek Mythology.  We found another partly completed API which we figured we’d be able to use and get the most out of, given the short time frame [GitHub - newsh/GreekAPI: Web API for Greek Mythology data](https://github.com/newsh/GreekAPI)
 After finding this we began working! 
 Once we decided on the family tree we worked together in getting the right data from the API. 
-We used a combination of Live Share and pair coding over Zoom to build this. To avoid merging code we used a single reposirotry.
+We used a combination of Live Share and pair coding over Zoom to build this. To avoid merging code we used a single repository.
 
-We really free-styled the build and made decisons on the fly together. Knowing we had little time we didn't want to waste it!
+We free-styled the build and made decisions on the fly together. Knowing we had little time we didn't want to waste it!
 
 
 
@@ -38,7 +38,7 @@ I worked on the list page:
 
 
 For the filter - This was a separate component. 
-That received the list of Gods from the API as props, and the user input to actively filter through the field sets dropdown data!
+That received the list of Gods from the API as props, and the user input to actively filter through the fieldsets dropdown data!
 `<GodFilter godListData={godListData} userInput={userInput} onChange={handleFilter} />`
 
 <img width="1440" alt="Screenshot 2021-05-07 at 14 39 18" src="https://user-images.githubusercontent.com/76621344/117462839-f3ee8a00-af46-11eb-8d0a-50a7d0031207.png">
@@ -75,7 +75,7 @@ export default GodFilter
 
 I also worked on styling the family tree! 
 ![Screenshot 2021-05-19 at 15 29 02](https://user-images.githubusercontent.com/76621344/118830554-f4781080-b8b6-11eb-86f7-2b59b7483a8d.png)
-To build this i made separate rows for each relationship. i.e row one contains parents, row two contains siblings and containing the brothers on one side and sisters on the other. By selecting which border is visible on each container and using a vertical line (a div with fixed height and border-right).
+To build this I made separate rows for each relationship. i.e row one contains parents, row two contains siblings and containing the brothers on one side and sisters on the other. By selecting which border is visible on each container and using a vertical line (a div with fixed height and border-right).
 ```
   .god-row {
     //border: 1px blue dotted;
@@ -184,7 +184,7 @@ useEffect(() => {
   ```
 
 ### Wins
-* Getting a cool working app deployed with the unsurprisingly scarce amount of mythological Greek APIs out there ! 
+* Getting a cool working app deployed with the unsurprisingly scarce amount of mythological Greek APIs out there! 
 * Getting a working family-tree styling wise! 
 
 # Key Learnings 
@@ -196,7 +196,7 @@ Great to work with and solve problems together, but also a lesson on how to work
 Users can go to the All Gods Section from the navbar
 
 <img width="1440" alt="Screenshot 2021-05-07 at 15 17 32" src="https://user-images.githubusercontent.com/76621344/117463233-59427b00-af47-11eb-92ca-a93ef305deb1.png">
-From here they can either search or choose from the drop down, or browse them all!
+From here they can either search or choose from the drop-down, or browse them all!
 
 <img width="1440" alt="Screenshot 2021-05-07 at 15 18 14" src="https://user-images.githubusercontent.com/76621344/117463344-7414ef80-af47-11eb-8ae8-43584b286eaa.png">
 
@@ -204,3 +204,5 @@ From here they can either search or choose from the drop down, or browse them al
 
 After selecting they will be taken to the Family Tree. From here users can choose any family members to be taken to their family tree
 <img width="1440" alt="Screenshot 2021-05-07 at 15 19 58" src="https://user-images.githubusercontent.com/76621344/117463544-b4746d80-af47-11eb-88fc-f0c8b2466b0f.png">
+
+
