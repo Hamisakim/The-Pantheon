@@ -76,7 +76,7 @@ export default GodFilter
 I also worked on styling the family tree! 
 ![Screenshot 2021-05-19 at 15 29 02](https://user-images.githubusercontent.com/76621344/118830554-f4781080-b8b6-11eb-86f7-2b59b7483a8d.png)
 To build this I made separate rows for each relationship. i.e row one contains parents, row two contains siblings and containing the brothers on one side and sisters on the other. By selecting which border is visible on each container and using a vertical line (a div with fixed height and border-right).
-```
+```javascript
   .god-row {
     //border: 1px blue dotted;
     display: flex;
@@ -101,7 +101,7 @@ To build this I made separate rows for each relationship. i.e row one contains p
     border-bottom: none;
   }
 ```
-```
+```javascript
   <div className='spouse-row god-row'>
           <div className='spouse single-fam'> 
             <Link to={`/family-tree/${haveWife()}`}> 
