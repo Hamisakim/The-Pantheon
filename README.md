@@ -188,9 +188,12 @@ useEffect(() => {
 * Getting a working family-tree styling wise! 
 
 # Key Learnings 
-This was the first real pair-coded project. We had to use zoom and slack to communicate. We used VSCode and LiveShare to work together
+This was the first real pair-coded project I've done so a great excercise in that. 
+This was also a great time to practice using SCSS to style our project.
 
-Great to work with and solve problems together, but also a lesson on how to work separately on the same project. 
+# Bugs
+The random takes you to only Uranus at the moment. We didn't have to time to get this working unfortunatley. 
+
 
 # Walkthrough 
 Users can go to the All Gods Section from the navbar
