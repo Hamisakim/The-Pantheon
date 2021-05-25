@@ -115,7 +115,7 @@ To build this I made separate rows for each relationship. i.e row one contains p
 
 
 # Wins and challenges 
-### Challenges! 
+### Challenges😧 
 We ran into a few! 
 * Styling the family tree to work with complicated relationships. 
 * Due to the way the data was nested the spousal status of the God also caused issues! We had to write two functions to render the correct name of spouse and to render if it was a husband or wife! 
@@ -183,11 +183,11 @@ useEffect(() => {
   }, [selectedName])
   ```
 
-### Wins
+### Wins🏆
 * Getting a cool working app deployed with the unsurprisingly scarce amount of mythological Greek APIs out there! 
 * Getting a working family-tree styling wise! 
 
-# Bugs
+# Bugs🕷
 The random takes you to only Uranus at the moment. We didn't have to time to get this working unfortunately. 
 
 # Key Learnings 
