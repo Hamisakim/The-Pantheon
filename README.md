@@ -188,7 +188,7 @@ useEffect(() => {
 * Getting a working family-tree styling wise! 
 
 # Bugs
-The random takes you to only Uranus at the moment. We didn't have to time to get this working unfortunatley. 
+The random takes you to only Uranus at the moment. We didn't have to time to get this working unfortunately. 
 
 # Key Learnings 
 This was the first real pair-coded project I've done so a great excercise in that. 
