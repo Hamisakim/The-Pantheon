@@ -23,7 +23,7 @@ This app provides a family tree of your selected Greek God, King, or Hero. Choos
 Build a front-end application consuming an external API.
 
 # Approach Taken
-We began by brainstorming ideas for cool projects to do and eventually we found this [greekmyths · Apiary](https://greekmythology1.docs.apiary.io/) However it was not working but we were set on the idea around Greek Mythology.  We found another partly completed API which we figured we’d be able to use and get the most out of, given the short time frame [GitHub - newsh/GreekAPI: Web API for Greek Mythology data](https://github.com/newsh/GreekAPI)
+We began by brainstorming ideas for cool projects to do and eventually we found this [greekmyths · Apiary](https://greekmythology1.docs.apiary.io/) however it was not working but we were set on the idea around Greek Mythology.  We found another partly completed API which we figured we’d be able to use and get the most out of, given the short time frame [GitHub - newsh/GreekAPI: Web API for Greek Mythology data](https://github.com/newsh/GreekAPI)
 After finding this we began working! 
 Once we decided on the family tree we worked together in getting the right data from the API. 
 We used a combination of Live Share and pair coding over Zoom to build this. To avoid merging code we used a single repository.
@@ -170,7 +170,7 @@ We ran into a few!
     }
 ```
 
-We Also ran into cors issue! We were able to find a solution using the below.
+We also ran into CORS issue! We were able to find a solution using the below.
 ```
 useEffect(() => {
     const getData = async () => {
@@ -187,12 +187,14 @@ useEffect(() => {
 * Getting a cool working app deployed with the unsurprisingly scarce amount of mythological Greek APIs out there! 
 * Getting a working family-tree styling wise! 
 
+# Bugs
+The random takes you to only Uranus at the moment. We didn't have to time to get this working unfortunatley. 
+
 # Key Learnings 
 This was the first real pair-coded project I've done so a great excercise in that. 
 This was also a great time to practice using SCSS to style our project.
 
-# Bugs
-The random takes you to only Uranus at the moment. We didn't have to time to get this working unfortunatley. 
+
 
 
 # Walkthrough 
